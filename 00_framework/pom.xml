@@ -9,7 +9,7 @@
 
 	<name>${project.artifactId}</name>
 	<description>数字货币交易系统父节点</description>
-	<url>bizzan.com</url>
+	<url>ck.com</url>
 	<modules>
 		<module>core</module>
         <module>admin</module>
