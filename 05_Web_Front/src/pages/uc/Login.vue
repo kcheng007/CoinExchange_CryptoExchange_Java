@@ -224,8 +224,11 @@ export default {
           tel = this.formInline.user,
           flagtel = reg.test(tel),
           flagpass = this.formInline.password.length >= 6 ? true : false;
-        flagtel && flagpass && captchaObj.verify();
-        (!flagtel || !flagpass) && this.$Message.error("请填写完整的信息");
+        // flagtel && flagpass && captchaObj.verify();
+        if(flagtel && flagpass) {
+          this.handleSubmit("formInline");
+        }
+        if(!flagtel || !flagpass) { this.$Message.error("请填写完整的信息");}
       });
     },
     logout() {
@@ -241,7 +244,7 @@ export default {
       });
     },
     handleSubmit(name) {
-      var result = this._captchaResult;
+      var result = true; // this._captchaResult;
       if (!result) {
         $("#notice").show();
         setTimeout(function() {

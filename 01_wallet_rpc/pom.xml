@@ -18,7 +18,7 @@
         <module>eth-support</module>
         <module>act</module>
         <module>ect</module>
-        <module>xrp</module>
+        <!--<module>xrp</module>-->
         <module>bch</module>
         <module>ltc</module>
         <module>erc-eusdt</module>

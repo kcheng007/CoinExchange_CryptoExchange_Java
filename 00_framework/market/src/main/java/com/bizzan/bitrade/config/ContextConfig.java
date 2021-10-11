@@ -9,13 +9,18 @@ import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Configuration
 public class ContextConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public FilterRegistrationBean corsFilter() {
 	     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 	     CorsConfiguration config = new CorsConfiguration();
-	     config.addAllowedOrigin("*");
+	     config.addAllowedOrigin("www.ck.com");
+	     config.addAllowedOrigin("ck.com");
+	     config.addAllowedOrigin("api.ck.com");
 	     config.setAllowCredentials(true);
 	     config.addAllowedHeader("*");
 	     config.addAllowedMethod("*");

@@ -1,5 +1,4 @@
 package com.bizzan.bitrade.event;
-
 import com.alibaba.fastjson.JSONObject;
 import com.bizzan.bitrade.constant.PromotionLevel;
 import com.bizzan.bitrade.constant.PromotionRewardType;
@@ -19,6 +18,7 @@ import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
 import java.util.Date;
+
 
 /**
  * @author GS
@@ -46,7 +46,7 @@ public class MemberEvent {
      */
     @Value("${commission.need.real-name:1}")
     private int needRealName;
-    
+
     @Value("${commission.promotion.second-level:0}")
     private int promotionSecondLevel ;
 

@@ -83,7 +83,7 @@ public class ApplicationConfig  extends WebMvcConfigurerAdapter {
     public FilterRegistrationBean corsFilterForBusi() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        config.addAllowedOrigin("*");
+        config.addAllowedOrigin("www.ck.com");
         config.setAllowCredentials(true);
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");

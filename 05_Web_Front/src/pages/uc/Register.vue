@@ -439,7 +439,7 @@ export default {
               } else {
                 this.$Notice.error({
                   title: this.$t("common.tip"),
-                  desc: "请输入正确的验证码"
+                  desc: "请输入正确的验证码1"
                 });
               }
             }

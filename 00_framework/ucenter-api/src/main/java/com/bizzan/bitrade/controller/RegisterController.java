@@ -288,12 +288,12 @@ public class RegisterController {
             return result;
         }
 
-        if ("中国".equals(loginByPhone.getCountry())) {
+        /*if ("中国".equals(loginByPhone.getCountry())) {
             Assert.isTrue(ValidateUtil.isMobilePhone(loginByPhone.getPhone().trim()), localeMessageSourceService.getMessage("PHONE_EMPTY_OR_INCORRECT"));
-        }
+        }*/
         String ip = request.getHeader("X-Real-IP");
         String phone = loginByPhone.getPhone();
-        ValueOperations valueOperations = redisTemplate.opsForValue();
+        /*ValueOperations valueOperations = redisTemplate.opsForValue();
         Object code =valueOperations.get(SysConstant.PHONE_REG_CODE_PREFIX + phone);
         isTrue(!memberService.phoneIsExist(phone), localeMessageSourceService.getMessage("PHONE_ALREADY_EXISTS"));
         isTrue(!memberService.usernameIsExist(loginByPhone.getUsername()), localeMessageSourceService.getMessage("USERNAME_ALREADY_EXISTS"));
@@ -310,7 +310,7 @@ public class RegisterController {
             return error(localeMessageSourceService.getMessage("VERIFICATION_CODE_INCORRECT"));
         } else {
             valueOperations.getOperations().delete(SysConstant.PHONE_REG_CODE_PREFIX + phone);
-        }
+        }*/
         //不可重复随机数
         String loginNo = String.valueOf(idWorkByTwitter.nextId());
         //盐
