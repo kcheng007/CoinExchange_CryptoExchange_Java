@@ -18,9 +18,7 @@ public class ContextConfig extends WebMvcConfigurerAdapter {
 	public FilterRegistrationBean corsFilter() {
 	     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 	     CorsConfiguration config = new CorsConfiguration();
-	     config.addAllowedOrigin("www.ck.com");
-	     config.addAllowedOrigin("ck.com");
-	     config.addAllowedOrigin("api.ck.com");
+	     config.addAllowedOrigin("http://www.ck.com");
 	     config.setAllowCredentials(true);
 	     config.addAllowedHeader("*");
 	     config.addAllowedMethod("*");
